@@ -15,11 +15,11 @@ interface ConfigSettings {
 }
 
 const env: string = process.env.NODE_ENV || 'development';
-const debug: boolean = process.env.DEBUG || false;
+const debug: boolean = true;
 
 // default settings are for dev environment
 const config: ConfigSettings = {
-  name: 'ClassPortal API',
+  name: 'Bus Booking System',
   env: env,
   debug: debug,
   root: path.join(__dirname, '/..'),
