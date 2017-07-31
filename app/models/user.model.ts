@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 
 interface userDocument extends mongoose.Document{
-  id:number;
+  userId: number;
   name:string;
   createdAt:Date;
 }
@@ -11,14 +11,18 @@ interface userModel extends mongoose.Model<userDocument>{
 }
 
 const userSchema = new mongoose.Schema({
-  id:{
-    type: number,
+  userId: {
+    type: Number,
     default:this.find().Count()+1,
   },
   name:{
     type: String,
     required: true,
     unique:true,
+  },
+  email: {
+    type: String,
+    required: true,
   },
   createdAt:{
     type:Date,
