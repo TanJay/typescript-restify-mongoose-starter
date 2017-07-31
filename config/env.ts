@@ -14,7 +14,7 @@ interface ConfigSettings {
   };
 }
 
-const env: string = process.env.NODE_ENV || 'development';
+const env: string = process.env.NODE_ENV || 'production';
 const debug: boolean = true;
 
 // default settings are for dev environment
