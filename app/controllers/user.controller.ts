@@ -29,11 +29,11 @@ function get(req: restify.Request, res: restify.Response, next: restify.Next) {
  * @returns {IStudentDocument}
  */
 function create(req: restify.Request, res: restify.Response, next: restify.Next) {
-  const user: userDocument = new user({
+  const us: userDocument = new user({
     name: req.params.name
   });
 
-  return user
+  return us
     .save()
     .then((user: userDocument) => {
       res.json(200, user);
